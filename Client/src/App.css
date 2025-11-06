@@ -1,0 +1,201 @@
+/* ======================== */
+/* Employee Form Card */
+.topnav {
+  background: linear-gradient(90deg, #ff4081, #6a11cb);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 25px;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.topnav a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 18px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.topnav a:hover {
+  color: #ffe082;
+  transform: scale(1.05);
+  text-decoration: underline;
+}
+
+.nav-user {
+  color: #fff;
+  margin-right: 15px;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+button.linkish {
+  background: transparent;
+  border: none;
+  color: #ffe082;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 15px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+button.linkish:hover {
+  color: #fff;
+  transform: scale(1.05);
+  text-decoration: underline;
+}
+
+.card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 35px 30px;
+  max-width: 650px;
+  margin: 40px auto;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.18);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+}
+
+/* ======================== */
+/* Form Fields - Adjusted Width */
+form input,
+form select {
+  width: 80%;           /* reduce width */
+  max-width: 400px;     /* optional max width */
+  margin: 12px auto;    /* center horizontally */
+  padding: 16px 20px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  transition: 0.3s;
+  display: block;       /* ensures margin auto works */
+  background: #f9faff;
+}
+
+form input:focus,
+form select:focus {
+  outline: none;
+  border-color: #6a11cb;
+  box-shadow: 0 0 12px rgba(106, 17, 203, 0.4);
+  background: #fff;
+}
+
+/* Form Buttons Container */
+form .form-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 25px;
+}
+
+form button {
+  padding: 14px 25px;
+  font-size: 16px;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+form button:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Two-column form layout for larger screens */
+@media (min-width: 768px) {
+  .form-row {
+    display: flex;
+    gap: 20px;
+  }
+
+  .form-row .form-group {
+    flex: 1;
+  }
+}
+
+/* Dashboard Buttons */
+.dashboard-buttons button {
+  flex: 1;
+  font-size: 17px;
+  padding: 16px 0;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.dashboard-buttons button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+}
+
+/* Employee Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+table th,
+table td {
+  padding: 14px 18px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+table th {
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  color: #fff;
+  font-weight: 600;
+}
+
+table tr:hover {
+  background: #f0f3f7;
+  cursor: pointer;
+}
+
+table button {
+  padding: 7px 14px;
+  font-size: 14px;
+  margin-right: 5px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .dashboard-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  table th,
+  table td {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+
+  form input,
+  form select {
+    width: 95%;         /* almost full width on mobile */
+    font-size: 15px;
+    padding: 14px 16px;
+  }
+
+  form .form-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  button {
+    padding: 12px 18px;
+    font-size: 15px;
+  }
+}
